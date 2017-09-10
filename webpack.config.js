@@ -8,13 +8,11 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
+    rules: [{
+    	test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel'
+      use: 'babel-loader'
     }]
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
   },
   devServer: {
     historyApiFallback: true,

@@ -1,4 +1,4 @@
-# Booklist App
+# My Reading List App
 
 Powered by React, Redux and Bootstrap.
 
