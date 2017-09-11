@@ -7,10 +7,10 @@ class BookList extends Component {
 
 	renderList() {
 		return (
-			this.props.books.map((book) => {
+			this.props.books.map((book, index) => {
 				return (
 					<li
-						key={book.title}
+						key={index}
 						onClick={() => this.props.selectBook(book)}
 						className="list-group-item">
 						{book.title}
@@ -39,7 +39,7 @@ function mapStateToProps(state) {
 }
 
 // anything returned form this function will end up as props
-// on the Booklist container - this.props.selectBook: selectBook()
+// on the Booklist container
 function mapDispatchToProps(dispatch) {
 	// whenever selectBook action is called, the result will be passed
 	// to all the reducers
