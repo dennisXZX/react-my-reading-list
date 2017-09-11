@@ -1,14 +1,15 @@
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
     './src/index.js'
   ],
-  output: {
-    path: __dirname,
-    publicPath: '/',
-    filename: 'bundle.js'
-  },
+	output: {
+		filename: 'bundle.js',
+		path: path.resolve(__dirname, 'build'),
+		publicPath: 'build/'
+	},
 	devServer: {
 		historyApiFallback: true,
 		contentBase: './'
@@ -41,6 +42,6 @@ module.exports = {
     ]
   },
 	plugins: [
-		new ExtractTextPlugin('styles.css')
+		new ExtractTextPlugin('apps.css')
 	]
 };
