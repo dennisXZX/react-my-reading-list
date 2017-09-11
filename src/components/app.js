@@ -5,6 +5,10 @@ import BookAddButton from './book-add-button';
 import BookList from '../containers/book-list'
 import BookDetail from '../containers/book-detail'
 
+// import CSS
+import 'bootstrap/dist/css/bootstrap.css';
+import '../../style/style.css';
+
 export default class App extends Component {
   render() {
     return (
