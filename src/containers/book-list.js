@@ -12,8 +12,9 @@ class BookList extends Component {
 					<li
 						key={index}
 						onClick={() => this.props.selectBook(book)}
-						className="list-group-item">
+						className="list-group-item book-item">
 						{book.title}
+						<button className='button-close'>X</button>
 					</li>
 				);
 			})
@@ -22,7 +23,7 @@ class BookList extends Component {
 
 	render() {
 		return (
-			<ul className="list-group col-sm-4">
+			<ul>
 				{this.renderList()}
 			</ul>
 		);

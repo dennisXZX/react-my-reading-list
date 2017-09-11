@@ -15,19 +15,19 @@ export default class App extends Component {
       <div className="container">
 	      <div className="row">
 		      <div className="col-xs-12">
-			      <h1 className="text-xs-center">My Reading List</h1>
+			      <h1 className="heading text-center">My Reading List</h1>
 		      </div>
-		      <div className="col-xs-12 text-xs-center">
+		      <div className="col-xs-12 text-center book-add">
 			      <BookInput />
 			      <BookAddButton />
 		      </div>
-		      <div className="row">
-			      <div className="col-xs-6">
-				      <BookList />
-			      </div>
-			      <div className="col-xs-6">
-				      <BookDetail />
-			      </div>
+	      </div>
+	      <div className="row book-display">
+		      <div className="col-xs-6">
+			      <BookList />
+		      </div>
+		      <div className="col-xs-6">
+			      <BookDetail />
 		      </div>
         </div>
       </div>
